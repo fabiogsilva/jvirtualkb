@@ -18,4 +18,10 @@
 			</plugin>
 		</plugins>
 	</build>
+	<distributionManagement>
+		<repository>
+			<id>artifactory</id>
+			<url>http://192.168.0.100:8081/artifactory/horizonte-sistemas</url>
+		</repository>
+	</distributionManagement>
 </project>

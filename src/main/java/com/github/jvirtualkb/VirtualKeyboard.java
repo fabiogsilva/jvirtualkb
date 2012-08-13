@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
+import javax.swing.text.JTextComponent;
 
 /**
  * @author Fábio Gomes
@@ -173,7 +174,14 @@ public class VirtualKeyboard extends JDialog {
 			x = 0;
 		}
 		setLocation(x, y);
+		setCaretAtBeginning();
 		super.setVisible(b);
+	}
+
+	private void setCaretAtBeginning() {
+		if (source instanceof JTextComponent) {
+			((JTextComponent) source).setCaretPosition(0);
+		}
 	}
 
 	public Component getSource() {
